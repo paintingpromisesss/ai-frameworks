@@ -1,0 +1,9 @@
+version,task,f1_macro,accuracy,mae_ms,rmse_ms
+sklearn baseline,classification,0.8832375055285272,0.8977272727272727,,
+sklearn baseline,regression,,,178.73545175962738,266.6247596975815
+sklearn improved,classification,0.8971361776738749,0.9090909090909091,,
+sklearn improved,regression,,,170.39476657906025,263.80608113106274
+own baseline,classification,0.8832375055285272,0.8977272727272727,,
+own baseline,regression,,,178.7354517596275,266.62475969758157
+own improved,classification,0.8971361776738749,0.9090909090909091,,
+own improved,regression,,,170.39476657906013,263.80608113106274

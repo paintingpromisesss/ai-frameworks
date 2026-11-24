@@ -12,6 +12,7 @@
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+python test_models.py
 jupyter execute --timeout=600 lab2.ipynb
 ```
 
