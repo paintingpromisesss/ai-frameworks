@@ -2,4 +2,17 @@
 
 Фокин Леонид Александрович, группа 401, вариант 20.
 
-Общие данные и функции оценки. [Описание датасетов](data/README.md).
+[Логистическая и линейная регрессия](lab2.ipynb)
+
+## Как запустить
+
+Откройте ноутбуки в Jupyter или VS Code с ядром Python из виртуального окружения. Команды ниже выполняются из корня репозитория (проверено на Python 3.12):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+jupyter execute --timeout=600 lab2.ipynb
+```
+
+Датасеты уже в репозитории: [источники и подготовка](data/README.md).
