@@ -8,6 +8,8 @@
 4. [Случайный лес](lab4.ipynb)
 5. [Градиентный бустинг](lab5.ipynb)
 
+[Итоговое сравнение всех моделей](summary.ipynb)
+
 ## Как запустить
 
 Откройте ноутбуки в Jupyter или VS Code с ядром Python из виртуального окружения. Команды ниже выполняются из корня репозитория (проверено на Python 3.12):
@@ -16,7 +18,8 @@
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-jupyter execute lab1.ipynb
+python test_models.py
+jupyter execute --timeout=600 lab1.ipynb lab2.ipynb lab3.ipynb lab4.ipynb lab5.ipynb summary.ipynb
 ```
 
-Скачивать данные для запуска не нужно. CSV лежат в `data/`; описание источников и отбора приведено [ниже](data/README.md).
+Скачивать данные для запуска не нужно: CSV лежат в `data/`, [описание источников и отбора](data/README.md). Результаты ячеек сохранены в ноутбуках. `summary.ipynb` читает готовые оценки из `results/`; повторно обучать модели для просмотра итогов не нужно. Самописные модели находятся в `models/`.
