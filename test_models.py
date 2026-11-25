@@ -1,5 +1,6 @@
 import numpy as np
 
+from models.forest import Forest
 from models.knn import KNN
 from models.linear import LeastSquares, Logistic
 from models.tree import Tree
@@ -30,7 +31,17 @@ def test_tree():
     np.testing.assert_allclose(reg.predict([[0.8], [2.2]]), [2, 10])
 
 
+def test_forest():
+    x = np.arange(20)[:, None]
+    y = np.where(x.ravel() < 10, 1, 2)
+    cls = Forest('classification', n_estimators=16, random_state=20).fit(x, y)
+    np.testing.assert_array_equal(cls.predict([[0], [19]]), [1, 2])
+    reg = Forest('regression', n_estimators=8, random_state=20).fit(x, np.full(20, 7))
+    np.testing.assert_allclose(reg.predict([[3], [9]]), [7, 7])
+
+
 if __name__ == '__main__':
     test_knn()
     test_linear()
     test_tree()
+    test_forest()
